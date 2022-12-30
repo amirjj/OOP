@@ -45,6 +45,8 @@ class Product:
         self.description = description
         Product.product_list.append(self)
         # This called composition
+        # This means that a class Composite can contain an object of another
+        # class Component
         self.reseller = reseller
 
     def __str__(self):
@@ -52,3 +54,7 @@ class Product:
 
     def is_free(self):
         return self.price == 0
+
+# https://realpython.com/inheritance-composition-python/
+# Usage of Abstract methods explained
+# Abstract Base Class: exist to be inherited, but never instantiated
