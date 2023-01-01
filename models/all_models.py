@@ -9,7 +9,7 @@ class User:
     def check_password(self, password):
         return self.password == password
 
-<<<<<<< HEAD
+
     @classmethod
     def create(cls, username, password, fullname, email):
         if len(password) < 3:  # prevent creating object with password less than
@@ -25,24 +25,17 @@ class User:
         # class it's better to write it in the class
         return len(password) > 3
 
-=======
->>>>>>> 945ff8d0d00c144367ff8d98539dde6910e28443
 
 class Customer(User):
     counter = 0  # class variable
 
     def __init__(self, username, password, fullname, email):
         super().__init__(username, password, fullname, email)
-<<<<<<< HEAD
         # private variable, can't be access from outside this class
         self.__wallet_amount = 0
         self.is_enable = False
         Customer.counter += 1  # counting number of objects created
 
-=======
-        self.wallet_amount = 0
-        self.is_enable = False
->>>>>>> 945ff8d0d00c144367ff8d98539dde6910e28443
 
     def __str__(self):
         return self.username
@@ -50,13 +43,10 @@ class Customer(User):
     def set_enable(self):
         self.is_enable = True
 
-<<<<<<< HEAD
     @property
     def wallet(self):  # convert method to attr
         return self.__wallet_amount
 
-=======
->>>>>>> 945ff8d0d00c144367ff8d98539dde6910e28443
 
 class Reseller(User):
     def __init__(self, brand, logo, *args, **kwargs):
